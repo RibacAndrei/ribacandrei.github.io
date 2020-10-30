@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid lerning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        }
+        .wrapper {
+            display: block;
+            margin: 50px auto;
+            width: 80vh;
+        }
+        .grid__box {
+            display: grid;
+            /*grid-template-columns: 32% auto 32%;*/  /* - разбивает блок на колонки*/
+            grid-template-columns: repeat(5, auto);
+            grid-gap: 5px;
+            grid-template-rows: 100px 200px;  /* - разбивает блок на ряды, все что дальше 2 рядов - минимальный размер*/
+            grid-auto-rows: 150px; /* - высота строки по умолчанию */
+
+            /*grid-auto-flow: column; !* - эквивалентно flex-direction: column*!*/
+            /*grid-auto-columns: 200px; !* - для экстра колонов выпадающих из блока*!*/
+        }
+        .grid__item {
+            display: block;
+            font-size: 3vw;
+            font-weight: 700;
+            text-align: center;
+            background: yellow;
+            border: 3px solid #ff7010;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="grid__box">
+        <div class="grid__item">1</div>
+        <div class="grid__item">2</div>
+        <div class="grid__item">3</div>
+        <div class="grid__item">4</div>
+        <div class="grid__item">5</div>
+        <div class="grid__item">6</div>
+        <div class="grid__item">7</div>
+        <div class="grid__item">8</div>
+        <div class="grid__item">9</div>
+        <div class="grid__item">10</div>
+        <div class="grid__item">11</div>
+        <div class="grid__item">12</div>
+    </div>
+</div>
+</body>
+</html>
